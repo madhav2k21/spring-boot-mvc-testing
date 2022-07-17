@@ -42,6 +42,7 @@ public class StudentAndGradeServiceTest {
         assertEquals("madhav@techm.com", studnent.getEmailAddress());
         assertEquals("madhav", studnent.getFirstname());
         assertEquals("anupoju", studnent.getLastname());
+        assertEquals("madhav@techm.com",studnent.getEmailAddress());
 
     }
 
