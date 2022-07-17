@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -28,5 +29,14 @@ public class StudentAndGradeService {
 
         return studentById.isPresent() ? true : false;
 
+    }
+
+    public void deleteStuentById(int id) {
+        studentRepository.deleteById(id);
+    }
+
+    public Iterable<CollegeStudent> getGradeBook() {
+        Iterable<CollegeStudent> all = studentRepository.findAll();
+        return all;
     }
 }
